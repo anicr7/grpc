@@ -284,7 +284,7 @@ void HttpRequest::OnHandshakeDone(void* arg, grpc_error_handle error) {
     // This might be due to delay in connectivity for example.
     // As we already finished and the on_done_ callback was called, nothing
     // to do here.
-   return; 
+    return;
   }
   if (error != GRPC_ERROR_NONE) {
     req->NextAddress(GRPC_ERROR_REF(error));
@@ -325,10 +325,10 @@ void HttpRequest::DoHandshake(const grpc_resolved_address* addr) {
       return;
     }
     grpc_arg security_connector_arg = grpc_security_connector_to_arg(sc.get());
-    new_args = grpc_channel_args_copy_and_add(
-        new_args_from_connector != nullptr ? new_args_from_connector
-                                           : channel_args_,
-        &security_connector_arg, 1);
+    new_args = grpc_channel_args_copy_and_add(new_args_from_connector != nullptr
+                                                  ? new_args_from_connector
+                                                  : channel_args_,
+                                              &security_connector_arg, 1);
     grpc_channel_args_destroy(new_args_from_connector);
   }
   // Start the handshake

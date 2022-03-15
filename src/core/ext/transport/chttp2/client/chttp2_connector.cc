@@ -91,7 +91,6 @@ void Chttp2Connector::Connect(const Args& args, Result* result,
   StartHandshakeLocked();
 }
 
-
 void Chttp2Connector::Shutdown(grpc_error_handle error) {
   MutexLock lock(&mu_);
   shutdown_ = true;
