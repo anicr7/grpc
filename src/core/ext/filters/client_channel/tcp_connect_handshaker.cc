@@ -15,6 +15,8 @@
  * limitations under the License.
  *
  */
+#include <grpc/support/port_platform.h>
+
 #include "src/core/ext/filters/client_channel/tcp_connect_handshaker.h"
 
 #include <string.h>
@@ -59,7 +61,7 @@ TCPConnectHandshaker::TCPConnectHandshaker() {
 }
 
 void TCPConnectHandshaker::Shutdown(grpc_error_handle why) {
-  // TODO(anramach): After migration to EventEngine, cancel the in-progress 
+  // TODO(anramach): After migration to EventEngine, cancel the in-progress
   // TCP connection attempt.
   {
     MutexLock lock(&mu_);
