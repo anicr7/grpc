@@ -81,18 +81,17 @@ void Chttp2Connector::Connect(const Args& args, Result* result,
     };
     memcpy(&connect_args_.address, args.address, sizeof(grpc_resolved_address));
   }
- 
+
   handshake_mgr_ = MakeRefCounted<HandshakeManager>();
   CoreConfiguration::Get().handshaker_registry().AddHandshakers(
       HANDSHAKER_CLIENT, args_.channel_args, args_.interested_parties,
       handshake_mgr_.get());
-  
+
   Ref().release();  // Ref held by Handshake Manager.
   handshake_mgr_->DoHandshake(endpoint_, args_.channel_args, &connect_args_,
                               nullptr /* acceptor */, OnHandshakeDone, this);
   endpoint_ = nullptr;  // Endpoint handed off to handshake manager.
 }
-
 
 void Chttp2Connector::Shutdown(grpc_error_handle error) {
   MutexLock lock(&mu_);
