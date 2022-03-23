@@ -37,7 +37,6 @@
 
 namespace grpc_core {
 
-
 // Arguments related to connection that can be used by the Handshaker.
 struct ConnectionArgs {
   // Address for which the handshake is being performed.
