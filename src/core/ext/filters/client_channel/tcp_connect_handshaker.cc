@@ -15,6 +15,8 @@
 // limitations under the License.
 //
 //
+#include <grpc/support/port_platform.h>
+
 #include "src/core/ext/filters/client_channel/tcp_connect_handshaker.h"
 
 #include <string.h>
@@ -86,12 +88,14 @@ void TCPConnectHandshaker::DoHandshake(grpc_tcp_server_acceptor* /*acceptor*/,
 
   const grpc_arg* addr_arg = grpc_channel_args_find(
       args->args, GRPC_ARG_TCP_HANDSHAKER_RESOLVED_ADDRESS);
-  
-  grpc_resolved_address* resolved_address = grpc_resolved_address_from_arg(addr_arg);
+
+  grpc_resolved_address* resolved_address =
+      grpc_resolved_address_from_arg(addr_arg);
   GPR_ASSERT(resolved_address != nullptr);
 
-  memcpy(&addr_, grpc_resolved_address_from_arg(addr_arg), sizeof(grpc_resolved_address));
-  
+  memcpy(&addr_, grpc_resolved_address_from_arg(addr_arg),
+         sizeof(grpc_resolved_address));
+
   bind_endpoint_to_pollset_ = grpc_channel_args_find_bool(
       args->args, GRPC_ARG_TCP_HANDSHAKER_BIND_ENDPOINT_TO_POLLSET, false);
 
