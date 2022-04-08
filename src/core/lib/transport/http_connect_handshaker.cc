@@ -38,9 +38,9 @@
 #include "src/core/lib/http/parser.h"
 #include "src/core/lib/resolver/resolver_registry.h"
 #include "src/core/lib/slice/slice_internal.h"
-#include "src/core/lib/uri/uri_parser.h"
 #include "src/core/lib/transport/handshaker.h"
 #include "src/core/lib/transport/handshaker_registry.h"
+#include "src/core/lib/uri/uri_parser.h"
 
 namespace grpc_core {
 
