@@ -25,8 +25,8 @@
 #include "src/core/lib/address_utils/parse_address.h"
 #include "src/core/lib/channel/channel_args.h"
 #include "src/core/lib/config/core_configuration.h"
-#include "src/core/lib/iomgr/tcp_client.h"
 #include "src/core/lib/iomgr/polling_entity.h"
+#include "src/core/lib/iomgr/tcp_client.h"
 #include "src/core/lib/transport/handshaker.h"
 #include "src/core/lib/transport/handshaker_registry.h"
 
@@ -102,7 +102,7 @@ void TCPConnectHandshaker::DoHandshake(grpc_tcp_server_acceptor* /*acceptor*/,
   args_ = args;
   char* address = grpc_channel_args_find_string(
       args->args, GRPC_ARG_TCP_HANDSHAKER_RESOLVED_ADDRESS);
-  absl::StatusOr<grpc_core::URI> uri = grpc_core::URI::Parse(address);
+  absl::StatusOr<URI> uri = URI::Parse(address);
   if (!uri.ok() || !grpc_parse_uri(*uri, &addr_)) {
     MutexLock lock(&mu_);
     FinishLocked(GRPC_ERROR_CREATE_FROM_STATIC_STRING(
