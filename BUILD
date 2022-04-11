@@ -1474,7 +1474,6 @@ grpc_cc_library(
     ],
 )
 
-
 grpc_cc_library(
     name = "handshaker_factory",
     language = "c++",
