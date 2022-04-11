@@ -1473,7 +1473,7 @@ grpc_cc_library(
 grpc_cc_library(
     name = "handshaker",
     language = "c++",
-    public_hdrs =  GRPC_PUBLIC_HDRS + [
+    public_hdrs = GRPC_PUBLIC_HDRS + [
         "src/core/lib/transport/handshaker.h",
     ],
     deps = [
@@ -1512,19 +1512,19 @@ grpc_cc_library(
     srcs = [
         "src/core/lib/transport/http_connect_handshaker.cc",
     ],
+    external_deps = [
+        "absl/strings",
+    ],
     language = "c++",
     public_hdrs = [
         "src/core/lib/transport/http_connect_handshaker.h",
     ],
-    external_deps = [
-        "absl/strings",
-    ],
     deps = [
+        "channel_args",
+        "config",
         "gpr_base",
         "handshaker",
         "handshaker_registry",
-        "channel_args",
-        "config",
         "httpcli",
         "slice",
         "uri_parser",
@@ -2567,8 +2567,8 @@ grpc_cc_library(
         "grpc_service_config_impl",
         "grpc_trace",
         "handshaker_registry",
-        "httpcli",
         "http_connect_handshaker",
+        "httpcli",
         "json",
         "json_util",
         "orphanable",
