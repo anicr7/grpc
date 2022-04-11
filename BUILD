@@ -1548,8 +1548,8 @@ grpc_cc_library(
     deps = [
         "channel_args",
         "config",
-        "grpc_base",
         "gpr_platform",
+        "grpc_base",
         "handshaker",
         "handshaker_registry",
         "memory_quota",
