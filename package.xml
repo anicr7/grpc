@@ -1399,7 +1399,6 @@
     <file baseinstalldir="/" name="src/core/lib/transport/connectivity_state.h" role="src" />
     <file baseinstalldir="/" name="src/core/lib/transport/error_utils.cc" role="src" />
     <file baseinstalldir="/" name="src/core/lib/transport/error_utils.h" role="src" />
-    <file baseinstalldir="/" name="src/core/lib/transport/handshaker.cc" role="src" />
     <file baseinstalldir="/" name="src/core/lib/transport/handshaker.h" role="src" />
     <file baseinstalldir="/" name="src/core/lib/transport/handshaker_factory.h" role="src" />
     <file baseinstalldir="/" name="src/core/lib/transport/handshaker_registry.cc" role="src" />

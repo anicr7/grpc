@@ -1500,7 +1500,6 @@ Pod::Spec.new do |s|
                       'src/core/lib/transport/connectivity_state.h',
                       'src/core/lib/transport/error_utils.cc',
                       'src/core/lib/transport/error_utils.h',
-                      'src/core/lib/transport/handshaker.cc',
                       'src/core/lib/transport/handshaker.h',
                       'src/core/lib/transport/handshaker_factory.h',
                       'src/core/lib/transport/handshaker_registry.cc',

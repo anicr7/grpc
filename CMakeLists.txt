@@ -2058,7 +2058,6 @@ add_library(grpc
   src/core/lib/transport/byte_stream.cc
   src/core/lib/transport/connectivity_state.cc
   src/core/lib/transport/error_utils.cc
-  src/core/lib/transport/handshaker.cc
   src/core/lib/transport/handshaker_registry.cc
   src/core/lib/transport/http_connect_handshaker.cc
   src/core/lib/transport/parsed_metadata.cc
@@ -2665,7 +2664,6 @@ add_library(grpc_unsecure
   src/core/lib/transport/byte_stream.cc
   src/core/lib/transport/connectivity_state.cc
   src/core/lib/transport/error_utils.cc
-  src/core/lib/transport/handshaker.cc
   src/core/lib/transport/handshaker_registry.cc
   src/core/lib/transport/http_connect_handshaker.cc
   src/core/lib/transport/parsed_metadata.cc
