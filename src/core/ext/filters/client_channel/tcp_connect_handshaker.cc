@@ -101,7 +101,7 @@ void TCPConnectHandshaker::DoHandshake(grpc_tcp_server_acceptor* /*acceptor*/,
   args_ = args;
   char* address = grpc_channel_args_find_string(
       args->args, GRPC_ARG_TCP_HANDSHAKER_RESOLVED_ADDRESS);
-  absl::StatusOr<grpc_core::URI> uri = grpc_core::URI::Parse(address);
+  absl::StatusOr<URI> uri = URI::Parse(address);
   GPR_ASSERT(uri.ok());
   GPR_ASSERT(grpc_parse_uri(*uri, &addr_));
   bind_endpoint_to_pollset_ = grpc_channel_args_find_bool(
