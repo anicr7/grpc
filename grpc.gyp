@@ -2015,7 +2015,6 @@
         'third_party/benchmark/src/benchmark_name.cc',
         'third_party/benchmark/src/benchmark_register.cc',
         'third_party/benchmark/src/benchmark_runner.cc',
-        'third_party/benchmark/src/check.cc',
         'third_party/benchmark/src/colorprint.cc',
         'third_party/benchmark/src/commandlineflags.cc',
         'third_party/benchmark/src/complexity.cc',
