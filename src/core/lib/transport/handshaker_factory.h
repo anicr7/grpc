@@ -38,7 +38,7 @@ class HandshakeManager;
 enum class HandshakerPriority : int {
   kPreTCPConnect,
   kTCPConnect,
-  kHTTPConnect, 
+  kHTTPConnect,
   kSecurity,
 };
 
