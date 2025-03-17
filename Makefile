@@ -1083,6 +1083,7 @@ LIBGRPC_SRC = \
     src/core/ext/filters/client_channel/subchannel.cc \
     src/core/ext/filters/client_channel/subchannel_pool_interface.cc \
     src/core/ext/filters/client_channel/subchannel_stream_client.cc \
+    src/core/ext/filters/client_channel/tcp_connect_handshaker.cc \
     src/core/ext/filters/deadline/deadline_filter.cc \
     src/core/ext/filters/fault_injection/fault_injection_filter.cc \
     src/core/ext/filters/fault_injection/service_config_parser.cc \
@@ -1861,6 +1862,7 @@ LIBGRPC_UNSECURE_SRC = \
     src/core/ext/filters/client_channel/subchannel.cc \
     src/core/ext/filters/client_channel/subchannel_pool_interface.cc \
     src/core/ext/filters/client_channel/subchannel_stream_client.cc \
+    src/core/ext/filters/client_channel/tcp_connect_handshaker.cc \
     src/core/ext/filters/deadline/deadline_filter.cc \
     src/core/ext/filters/fault_injection/fault_injection_filter.cc \
     src/core/ext/filters/fault_injection/service_config_parser.cc \

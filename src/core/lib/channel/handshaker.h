@@ -68,6 +68,10 @@ struct HandshakerArgs {
   // User data passed through the handshake manager.  Not used by
   // individual handshakers.
   void* user_data = nullptr;
+  // Deadline associated with the handshake.
+  // TODO(anramach): Move this out of handshake args after event engine
+  // is the default.
+  Timestamp deadline;
 };
 
 ///
