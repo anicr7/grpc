@@ -15078,6 +15078,7 @@ targets:
   language: c++
   headers:
   - test/core/test_util/fake_udp_and_tcp_server.h
+  - test/core/test_util/scoped_env_var.h
   src:
   - test/core/resolver/google_c2p_resolver_test.cc
   - test/core/test_util/fake_udp_and_tcp_server.cc
